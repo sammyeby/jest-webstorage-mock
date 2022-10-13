@@ -1,0 +1,46 @@
+{
+  "name": "@sammyeby/jest-webstorage-mock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "scripts": {
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "prepare": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sammyeby/jest-webstorage-mock.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sammyeby/jest-webstorage-mock/issues"
+  },
+  "homepage": "https://github.com/sammyeby/jest-webstorage-mock#readme",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "keywords": [
+    "jest",
+    "storage",
+    "mock",
+    "sessionStorage",
+    "localStorage",
+    "web"
+  ],
+  "author": "Samuel Umeh <contact@samuelumeh.com> (https://samuelumeh.com)",
+  "license": "ISC",
+  "peerDependencies": {
+    "jest": ">=27"
+  },
+  "devDependencies": {
+    "@types/jest": "29.1.2",
+    "jest": "29.1.2",
+    "typescript": "4.8.4"
+  }
+}
