@@ -35,6 +35,9 @@
   ],
   "author": "Samuel Umeh <contact@samuelumeh.com> (https://samuelumeh.com)",
   "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  },
   "peerDependencies": {
     "jest": ">=27"
   },
