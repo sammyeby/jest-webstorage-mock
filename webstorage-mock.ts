@@ -7,26 +7,29 @@ const storageMock = () => {
     let store: IStorage = {};
 
     return {
-        getItem: jest.fn().mockImplementation((key: string): string | null => {
+        getItem: (key: string): string | null => {
             return store[key] || null
-        }),
-        setItem: jest.fn().mockImplementation((key: string, value: string): void => {
+        },
+        setItem: (key: string, value: string): void => {
             store[key] = value;
-        }),
-        removeItem: jest.fn().mockImplementation((key: string): void => {
+        },
+        removeItem: (key: string): void => {
             delete store[key];
-        }),
-        clear: jest.fn().mockImplementation((): void => {
+        },
+        clear: (): void => {
             store = {}
-        })
+        }
     }
 };
 
+
 Object.defineProperty(window, 'localStorage', {
-    value: storageMock
+    writable: true,
+    value: jest.fn().mockImplementation(storageMock)
 });
 
 
 Object.defineProperty(window, 'sessionStorage', {
-    value: storageMock
+    writable: true,
+    value: jest.fn().mockImplementation(storageMock)
 });
