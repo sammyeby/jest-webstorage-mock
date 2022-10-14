@@ -2,9 +2,9 @@
   "name": "@sammyeby/jest-webstorage-mock",
   "version": "1.0.0",
   "description": "",
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.js",
-  "types": "./dist/esm/index.d.ts",
+  "main": "./dist/cjs/webstorage-mock.js",
+  "module": "./dist/esm/webstorage-mock.js",
+  "types": "./dist/esm/webstorage-mock.d.ts",
   "scripts": {
     "build": "npm run build:esm && npm run build:cjs",
     "build:esm": "tsc",
@@ -39,7 +39,7 @@
     "access": "public"
   },
   "peerDependencies": {
-    "jest": ">=27"
+    "jest": ">=26"
   },
   "devDependencies": {
     "@types/jest": "29.1.2",
