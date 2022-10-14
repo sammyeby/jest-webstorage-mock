@@ -1,11 +1,9 @@
-
 interface IStorage {
     [key: string]: string;
 }
 
-const storageMock = () => {
+const storageMock = (() => {
     let store: IStorage = {};
-
     return {
         getItem: (key: string): string | null => {
             return store[key] || null
@@ -20,16 +18,14 @@ const storageMock = () => {
             store = {}
         }
     }
-};
-
+})();
 
 Object.defineProperty(window, 'localStorage', {
     writable: true,
-    value: jest.fn().mockImplementation(storageMock)
+    value: storageMock
 });
-
 
 Object.defineProperty(window, 'sessionStorage', {
     writable: true,
-    value: jest.fn().mockImplementation(storageMock)
+    value: storageMock
 });
