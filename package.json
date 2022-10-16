@@ -1,6 +1,6 @@
 {
   "name": "@sammyeby/jest-webstorage-mock",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "./dist/cjs/webstorage-mock.js",
   "module": "./dist/esm/webstorage-mock.js",
