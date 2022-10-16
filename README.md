@@ -3,8 +3,7 @@
 in package.json add below for example
 
 `"jest": {
-"setupFiles": [
-"<rootDir>/__jest__/jest-webstorage-mock",`
+"setupFiles": ["jest-webstorage-mock"],`
 
 if using create react app, then just import the script in setupTests.ts
 
